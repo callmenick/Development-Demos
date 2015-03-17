@@ -8,12 +8,11 @@ module.exports = function(grunt) {
         options: {
           style: 'expanded',
           sourcemap: 'none',
-          cacheLocation: 'assets/sass/.sass-cache'
+          cacheLocation: 'sass/.sass-cache'
         },
         files: {
-          'assets/css/fontawesome.css': 'assets/sass/fontawesome/fontawesome.scss',
-          'assets/css/common.css': 'assets/sass/common/common.scss',
-          'assets/css/main.css': 'assets/sass/main/main.scss'
+          'css/src/common.css': 'sass/common.scss',
+          'css/src/component.css': 'sass/component.scss'
         },
       }
     },
@@ -22,23 +21,23 @@ module.exports = function(grunt) {
         browsers: ['last 5 versions', 'ie 9']
       },
       target: {
-        src: 'assets/css/*.css'
+        src: 'css/src/*.css'
       }
     },
     cssmin: {
       target: {
         files: [{
           expand: true,
-          cwd: 'assets/css',
+          cwd: 'css/src',
           src: ['*.css', '!*.min.css'],
-          dest: 'assets/css',
+          dest: 'css/dist',
           ext: '.min.css'
         }]
       }
     },
     watch: {
       css: {
-        files: 'assets/sass/**/*.scss',
+        files: 'sass/**/*.scss',
         tasks: ['sass', 'autoprefixer', 'cssmin']
       }
     }
@@ -51,6 +50,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Tasks.
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'watch']);
+  grunt.registerTask('watcher', ['watch']);
 
 };
