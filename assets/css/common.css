@@ -200,7 +200,8 @@ img {
   border: solid 2px #28aadc;
 }
 
-.demo-sub-nav__link:hover {
+.demo-sub-nav__link:hover,
+.demo-sub-nav__item.active .demo-sub-nav__link {
   color: #fff;
   background-color: #28aadc;
 }

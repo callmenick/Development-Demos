@@ -105,7 +105,8 @@
   border: solid 2px $color--theme;
 }
 
-.demo-sub-nav__link:hover {
+.demo-sub-nav__link:hover,
+.demo-sub-nav__item.active .demo-sub-nav__link {
   color: #fff;
   background-color: $color--theme;
 }
