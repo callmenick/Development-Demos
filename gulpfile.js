@@ -4,9 +4,8 @@ var gulp = require('gulp');
 // require plugins
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
-var cssmin = require('gulp-minify-css');
-var notify = require('gulp-notify');
-var plumber = require('gulp-plumber');
+var gutil = require('gulp-util');
+var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sass = require('gulp-ruby-sass');
 var uglify = require('gulp-uglify');
@@ -20,8 +19,7 @@ gulp.task('js', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./js/dist/'))
-    .pipe(notify('JS task complete.'));
+    .pipe(gulp.dest('./js/dist/'));
 });
 
 // styles task
@@ -30,9 +28,14 @@ gulp.task('styles', function() {
       style: 'expanded',
       noCache: true
     })
+    .on('error', function(err) {
+      gutil.beep();
+      console.error(err);
+      this.emit('end');
+    })
     .pipe(autoprefixer())
     .pipe(gulp.dest('./css/'))
-    .pipe(cssmin())
+    .pipe(minifyCSS())
     .pipe(rename({
       suffix: '.min'
     }))
