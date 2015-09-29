@@ -1,27 +1,26 @@
 /* -----------------------------------------------------------------------------
 
-  CONTAINER OBJECTS
+  FOOTER OBJECT
   
 ----------------------------------------------------------------------------- */
 
-.o-container {
-  margin: 0 auto;
-  padding: 0 12px;
-  max-width: 960px;
+.o-footer {
+  padding: 12px 0;
+  text-align: center;
 }
 
 @media all and ( min-width: $breakpoint--small ) {
 
-  .o-container {
-    padding: 0 24px;
+  .o-footer {
+    padding: 24px 0;
   }
 
 }
 
 @media all and ( min-width: $breakpoint--medium ) {
 
-  .o-container {
-    padding: 0 48px;
+  .o-footer {
+    padding: 48px 0;
   }
 
 }
