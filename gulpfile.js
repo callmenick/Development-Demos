@@ -7,14 +7,10 @@
    */
   var gulp = require('gulp');
   var autoprefixer = require('gulp-autoprefixer');
-  var cssmin = require('gulp-cssmin');
-  var concat = require('gulp-concat');
   var jshint = require('gulp-jshint');
   var notify = require("gulp-notify");
-  var rename = require('gulp-rename');
   var sass = require('gulp-sass');
   var stylish = require('jshint-stylish');
-  var uglify = require('gulp-uglify');
 
   /**
    * Paths
@@ -38,17 +34,7 @@
       }))
       .on('error', sass.logError)
       .pipe(autoprefixer())
-      .pipe(gulp.dest('./css'))
-      .pipe(cssmin())
-      .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest('./css'));
-  });
-
-  /**
-   * Styles watcher
-   */
-  gulp.task('stylesDev', function() {
-    gulp.watch(paths.sass, ['styles']);
   });
 
   /**
@@ -57,42 +43,20 @@
   gulp.task('lint', function() {
     return gulp.src(paths.scripts)
       .pipe(jshint())
-      .pipe(jshint.reporter(stylish))
-      .pipe(jshint.reporter('fail'))
-      .on('error', notify.onError({
-        title: 'JS hint failed',
-        message: 'Check the console for errors'
-      }));
+      .pipe(jshint.reporter(stylish));
   });
 
   /**
-   * Scripts concat
+   * Watch task
    */
-  gulp.task('concat', function() {
-    return gulp.src(paths.scripts)
-      .pipe(concat('main.js'))
-      .pipe(gulp.dest('./js/dist/'))
-      .pipe(uglify())
-      .pipe(rename({
-        suffix: '.min'
-      }))
-      .pipe(gulp.dest('./js/dist/'));
-  });
-
-  /**
-   * Scripts dev
-   */
-  gulp.task('scriptsDev', function() {
+  gulp.task('watch', ['styles', 'lint'], function() {
+    gulp.watch(paths.sass, ['styles']);
     gulp.watch(paths.scripts, ['lint']);
   });
 
   /**
-   * Final tasks - these are the tasks that should be run from the command line,
-   * as they encompass the above.
+   * Default task
    */
-  gulp.task('default', ['styles', 'lint', 'stylesDev', 'scriptsDev']);
-  gulp.task('styles:dev', ['styles', 'stylesDev']);
-  gulp.task('scripts:dev', ['lint', 'scriptsDev']);
-  gulp.task('scripts:build', ['lint', 'concat']);
+  gulp.task('default', ['styles', 'lint']);
 
 })();
