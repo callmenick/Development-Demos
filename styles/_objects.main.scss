@@ -5,5 +5,11 @@
 ----------------------------------------------------------------------------- */
 
 .o-main {
-  /**/
+  padding: 24px 0;
+}
+
+@media all and (min-width: $breakpoint--medium) {
+  .o-main {
+    padding: 48px 0;
+  }
 }

@@ -34,11 +34,9 @@
   text-align: center;
 }
 
-@media all and ( min-width: $breakpoint--small ) {
-
+@media all and (min-width: $breakpoint--small) {
   .o-header__title {
     margin: 36px;
     font-size: $font-size--ultra;
   }
-
 }

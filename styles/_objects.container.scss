@@ -10,15 +10,13 @@
   max-width: 960px;
 }
 
-@media all and ( min-width: $breakpoint--small ) {
-
+@media all and (min-width: $breakpoint--small) {
   .o-container {
     padding: 0 24px;
   }
-
 }
 
-@media all and ( min-width: $breakpoint--medium ) {
+@media all and (min-width: $breakpoint--medium) {
 
   .o-container {
     padding: 0 48px;
