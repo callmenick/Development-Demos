@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Demo</title>
   <meta name="description" content="">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -16,16 +15,14 @@
   <nav class="o-header-nav">
     <a href="#" class="o-header-nav__link"><i class="fa fa-arrow-left"></i> Previous Demo</a>
     <a href="#" class="o-header-nav__link">Back To Article <i class="fa fa-star"></i></a>
-  </nav>
-  <div class="o-container">
-    <h1 class="o-header__title">Lorem Ipsum This Is The Title</h1>
-  </div>
-</header>
-
-<main class="o-content">
-  <div class="o-container">
-
-    <div class="o-section">
+  </nav><!-- /o-header-nav -->
+  <section class="o-section">
+    <div class="o-container">
+      <h1 class="o-header__title">Lorem Ipsum This Is The Title</h1>
+    </div>
+  </section><!-- /o-section -->
+  <section class="o-section">
+    <div class="o-container">
       <nav class="o-sub-nav">
         <ul class="o-sub-nav__items">
           <li class="o-sub-nav__item"><a href="#" class="o-sub-nav__link">Item 1</a></li>
@@ -34,26 +31,29 @@
           <li class="o-sub-nav__item"><a href="#" class="o-sub-nav__link">Item 4</a></li>
           <li class="o-sub-nav__item"><a href="#" class="o-sub-nav__link">Item 5</a></li>
         </ul>
-      </nav>
+      </nav><!-- /o-sub-nav -->
     </div>
+  </section><!-- /o-section -->
+</header><!-- /o-header -->
 
-    <div class="o-section">
+<main class="o-main">
+  <section class="o-section">
+    <div class="o-container">
       component
     </div>
-
-    <div class="o-section">
+  </section><!-- /o-section -->
+  <section class="o-section">
+    <div class="o-container">
       <div id="github-icons"></div>
     </div>
-  </div>
-</main>
+  </section><!-- /o-section -->
+</main><!-- /o-main -->
 
 <footer class="o-footer">
   <div class="o-container">
     <small>&copy; 2015, callmenick.com</small>
   </div>
-</footer>
-
-<script src="js/vendor/d3.min.js"></script>
+</footer><!-- /o-footer -->
 
 <!-- EXTERNAL SCRIPTS FOR CALLMENICK.COM, PLEASE DO NOT INCLUDE -->
 <script src="js/src/githubicons.js"></script>
