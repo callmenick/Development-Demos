@@ -1,5 +1,4 @@
 (function() {
-
   'use strict'
 
   /**
@@ -7,8 +6,11 @@
    */
   var gulp = require('gulp');
   var autoprefixer = require('gulp-autoprefixer');
+  var browserSync = require('browser-sync').create();
+  var cssmin = require('gulp-cssmin');
   var jshint = require('gulp-jshint');
-  var notify = require("gulp-notify");
+  var notify = require('gulp-notify');
+  var rename = require('gulp-rename');
   var sass = require('gulp-sass');
   var stylish = require('jshint-stylish');
 
@@ -16,15 +18,15 @@
    * Paths
    */
   var paths = {
-    sass: ['./sass/**/*.scss'],
-    scripts: ['./js/src/**/*.js']
+    styles: ['styles/**/*.scss'],
+    scripts: ['js/src/**/*.js']
   };
 
   /**
    * Styles
    */
   gulp.task('styles', function() {
-    return gulp.src(paths.sass)
+    return gulp.src(paths.styles)
       .pipe(sass({
         outputStyle: 'expanded'
       }))
@@ -34,7 +36,12 @@
       }))
       .on('error', sass.logError)
       .pipe(autoprefixer())
-      .pipe(gulp.dest('./css'));
+      .pipe(gulp.dest('css'))
+      .pipe(cssmin())
+      .pipe(rename({
+        suffix: '.min'
+      }))
+      .pipe(gulp.dest('css'));
   });
 
   /**
@@ -47,16 +54,22 @@
   });
 
   /**
-   * Watch task
+   * Serve task
    */
-  gulp.task('watch', ['styles', 'lint'], function() {
-    gulp.watch(paths.sass, ['styles']);
+  gulp.task('serve', ['styles', 'lint'], function() {
+    browserSync.init({
+      server: {
+        baseDir: './'
+      }
+    });
+
+    gulp.watch(paths.styles, ['styles']);
     gulp.watch(paths.scripts, ['lint']);
+    gulp.watch('./*.html').on('change', browserSync.reload);
   });
 
   /**
    * Default task
    */
   gulp.task('default', ['styles', 'lint']);
-
 })();
