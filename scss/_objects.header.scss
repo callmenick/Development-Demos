@@ -1,7 +1,7 @@
 /* -----------------------------------------------------------------------------
 
-  HEADER OBJECT
-  
+  Objects - Header
+
 ----------------------------------------------------------------------------- */
 
 .o-header {
@@ -35,7 +35,7 @@
 }
 
 @media all and ( min-width: $breakpoint--small ) {
-  
+
   .o-header__title {
     margin: 36px;
     font-size: $font-size--ultra;
