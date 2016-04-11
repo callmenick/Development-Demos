@@ -9,46 +9,28 @@
   var browserSync = require('browser-sync').create();
   var cssmin = require('gulp-cssmin');
   var jshint = require('gulp-jshint');
-  var notify = require('gulp-notify');
-  var rename = require('gulp-rename');
   var sass = require('gulp-sass');
   var stylish = require('jshint-stylish');
-
-  /**
-   * Paths
-   */
-  var paths = {
-    styles: ['styles/**/*.scss'],
-    scripts: ['js/src/**/*.js']
-  };
 
   /**
    * Styles
    */
   gulp.task('styles', function() {
-    return gulp.src(paths.styles)
+    return gulp.src(['scss/**/*.scss'])
       .pipe(sass({
         outputStyle: 'expanded'
-      }))
-      .on('error', notify.onError({
-        title: 'Error compiling Sass',
-        message: 'Check the console for info'
       }))
       .on('error', sass.logError)
       .pipe(autoprefixer())
       .pipe(gulp.dest('css'))
-      .pipe(cssmin())
-      .pipe(rename({
-        suffix: '.min'
-      }))
-      .pipe(gulp.dest('css'));
+      .pipe(cssmin());
   });
 
   /**
    * Scripts linting
    */
   gulp.task('lint', function() {
-    return gulp.src(paths.scripts)
+    return gulp.src(['js/**/*/js', '!js/vendor/**/*/js'])
       .pipe(jshint())
       .pipe(jshint.reporter(stylish));
   });
@@ -63,8 +45,8 @@
       }
     });
 
-    gulp.watch(paths.styles, ['styles']);
-    gulp.watch(paths.scripts, ['lint']);
+    gulp.watch(['scss/**/*.scss'], ['styles']);
+    gulp.watch(['js/**/*.js'], ['lint']);
     gulp.watch('./*.html').on('change', browserSync.reload);
   });
 
