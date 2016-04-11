@@ -1,0 +1,25 @@
+/* -----------------------------------------------------------------------------
+
+  Objects - Container
+
+----------------------------------------------------------------------------- */
+
+.Container {
+  margin: 0 auto;
+  padding: 0 1.2rem;
+  max-width: 96rem;
+}
+
+@media all and (min-width: $breakpoint--sm) {
+  .Container {
+    padding: 0 2.4rem;
+  }
+}
+
+@media all and (min-width: $breakpoint--md) {
+
+  .Container {
+    padding: 0 4.8rem;
+  }
+
+}

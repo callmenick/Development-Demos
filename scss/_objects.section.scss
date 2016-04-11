@@ -1,0 +1,19 @@
+/* -----------------------------------------------------------------------------
+
+  Objects - Section
+
+----------------------------------------------------------------------------- */
+
+.Section {
+  margin-bottom: 2.4rem;
+}
+
+.Section:last-child {
+  margin-bottom: 0;
+}
+
+@media all and (min-width: $breakpoint--md) {
+  .Section {
+    margin-bottom: 4.8rem;
+  }
+}

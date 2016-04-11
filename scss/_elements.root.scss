@@ -1,0 +1,17 @@
+/* -----------------------------------------------------------------------------
+
+  Elements - Root
+
+----------------------------------------------------------------------------- */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: $color--neutral-4;
+  background-color: #fff;
+  font-family: $font-family--primary;
+  font-size: $font-size--sm;
+  line-height: $line-height--md;
+}

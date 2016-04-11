@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+//
+// Fonts
+//
+// -----------------------------------------------------------------------------
+
+$font-family--primary: "Oxygen", Helvetica, sans-serif;
+
+$font-size--xs: 1.0rem;
+$font-size--sm: 1.6rem;
+$font-size--md: 2.1rem;
+$font-size--lg: 2.8rem;
+$font-size--xl: 3.6rem;
+$font-size--2x: 4.8rem;
+$font-size--3x: 5.4rem;
+
+$line-height--sm: 1.2;
+$line-height--md: 1.8;
+$line-height--lg: 2.2;
+
+// -----------------------------------------------------------------------------
+//
+// Colours
+//
+// -----------------------------------------------------------------------------
+
+$color--neutral-1: rgb(21, 21, 21);
+$color--neutral-2: rgb(39, 39, 39);
+$color--neutral-3: rgb(59, 59, 59);
+$color--neutral-4: rgb(109, 109, 109);
+$color--neutral-5: rgb(129, 129, 129);
+$color--neutral-6: rgb(179, 179, 179);
+$color--neutral-7: rgb(231, 231, 231);
+$color--neutral-8: rgb(241, 241, 241);
+
+$color--theme: rgb(40, 170, 220);
+$color--theme-dark: darken($color--theme, 20%);
+$color--theme-light: lighten($color--theme, 20%);
+
+// -----------------------------------------------------------------------------
+//
+// Breakpoints
+//
+// -----------------------------------------------------------------------------
+
+$breakpoint--sm: 480px;
+$breakpoint--md: 720px;
+$breakpoint--lg: 1020px;
+$breakpoint--xl: 1200px;

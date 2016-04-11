@@ -1,0 +1,49 @@
+/* -----------------------------------------------------------------------------
+
+  Objects - Header
+
+----------------------------------------------------------------------------- */
+
+.Header {
+  margin: 0;
+  padding: 0;
+}
+
+.Header-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color--theme;
+}
+
+.Header-nav-link {
+  padding: 1.2rem;
+  color: #fff;
+}
+
+.Header-nav-link:hover {
+  color: #fff;
+  background-color: $color--theme-dark;
+}
+
+.Header-title {
+  margin: 2.4rem;
+  padding: 0;
+  color: $color--neutral-6;
+  font-size: $font-size--xl;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media all and (min-width: $breakpoint--sm) {
+  .Header-title {
+    margin: 3.6rem;
+    font-size: $font-size--2x;
+  }
+}
+
+@media all and (min-width: $breakpoint--md) {
+  .Header-title {
+    margin: 3.6rem;
+    font-size: $font-size--3x;
+  }
+}
