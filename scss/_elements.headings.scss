@@ -10,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $color--neutral-2;
+  color: $color-neutral-1;
   font-weight: 700;
-  line-height: $line-height--sm;
+  line-height: map-get($line-height, sm);
 }

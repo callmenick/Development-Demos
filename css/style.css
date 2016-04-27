@@ -3131,28 +3131,30 @@ th {
   Generic - Fonts
 
 ----------------------------------------------------------------------------- */
+/**
+ * Montserrat
+ */
 @font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/oxygen-v5-latin-300.eot");
-  src: local("Oxygen Light"), local("Oxygen-Light"), url("../fonts/oxygen-v5-latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/oxygen-v5-latin-300.woff2") format("woff2"), url("../fonts/oxygen-v5-latin-300.woff") format("woff"), url("../fonts/oxygen-v5-latin-300.ttf") format("truetype"), url("../fonts/oxygen-v5-latin-300.svg#Oxygen") format("svg");
-}
-
-@font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oxygen-v5-latin-regular.eot");
-  src: local("Oxygen"), local("Oxygen-Regular"), url("../fonts/oxygen-v5-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/oxygen-v5-latin-regular.woff2") format("woff2"), url("../fonts/oxygen-v5-latin-regular.woff") format("woff"), url("../fonts/oxygen-v5-latin-regular.ttf") format("truetype"), url("../fonts/oxygen-v5-latin-regular.svg#Oxygen") format("svg");
-}
-
-@font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
+  font-family: 'Montserrat';
+  src: url("../fonts/montserrat-bold-webfont.eot");
+  src: url("../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-bold-webfont.woff2") format("woff2"), url("../fonts/montserrat-bold-webfont.woff") format("woff"), url("../fonts/montserrat-bold-webfont.ttf") format("truetype"), url("../fonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
   font-weight: 700;
-  src: url("../fonts/oxygen-v5-latin-700.eot");
-  src: local("Oxygen Bold"), local("Oxygen-Bold"), url("../fonts/oxygen-v5-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/oxygen-v5-latin-700.woff2") format("woff2"), url("../fonts/oxygen-v5-latin-700.woff") format("woff"), url("../fonts/oxygen-v5-latin-700.ttf") format("truetype"), url("../fonts/oxygen-v5-latin-700.svg#Oxygen") format("svg");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/montserrat-light-webfont.eot");
+  src: url("../fonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-light-webfont.woff2") format("woff2"), url("../fonts/montserrat-light-webfont.woff") format("woff"), url("../fonts/montserrat-light-webfont.ttf") format("truetype"), url("../fonts/montserrat-light-webfont.svg#montserratlight") format("svg");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/montserrat-thin-webfont.eot");
+  src: url("../fonts/montserrat-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-thin-webfont.woff2") format("woff2"), url("../fonts/montserrat-thin-webfont.woff") format("woff"), url("../fonts/montserrat-thin-webfont.ttf") format("truetype"), url("../fonts/montserrat-thin-webfont.svg#montserratthin") format("svg");
+  font-weight: 100;
+  font-style: normal;
 }
 
 /* -----------------------------------------------------------------------------
@@ -3180,9 +3182,9 @@ html {
 }
 
 body {
-  color: #6d6d6d;
+  color: #606060;
   background-color: #fff;
-  font-family: "Oxygen", Helvetica, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.8;
 }
@@ -3198,7 +3200,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #272727;
+  color: #111111;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -3244,19 +3246,19 @@ img {
 ----------------------------------------------------------------------------- */
 .Container {
   margin: 0 auto;
-  padding: 0 1.2rem;
+  padding: 0 1.7rem;
   max-width: 96rem;
 }
 
-@media all and (min-width: 480px) {
+@media (min-width: 480px) {
   .Container {
-    padding: 0 2.4rem;
+    padding: 0 2.75rem;
   }
 }
 
-@media all and (min-width: 720px) {
+@media (min-width: 640px) {
   .Container {
-    padding: 0 4.8rem;
+    padding: 0 4.45rem;
   }
 }
 
@@ -3283,7 +3285,7 @@ img {
 }
 
 .Header-nav-link {
-  padding: 1.2rem;
+  padding: 1.05rem;
   color: #fff;
 }
 
@@ -3293,25 +3295,18 @@ img {
 }
 
 .Header-title {
-  margin: 2.4rem;
+  margin: 2.75rem;
   padding: 0;
-  color: #b3b3b3;
-  font-size: 3.6rem;
+  color: #909090;
+  font-size: 2.8rem;
   font-weight: 300;
   text-align: center;
 }
 
-@media all and (min-width: 480px) {
+@media (min-width: 480px) {
   .Header-title {
-    margin: 3.6rem;
-    font-size: 4.8rem;
-  }
-}
-
-@media all and (min-width: 720px) {
-  .Header-title {
-    margin: 3.6rem;
-    font-size: 5.4rem;
+    margin: 4.45rem;
+    font-size: 3.6rem;
   }
 }
 
@@ -3321,12 +3316,12 @@ img {
 
 ----------------------------------------------------------------------------- */
 .Main {
-  padding: 2.4rem 0;
+  padding: 2.75rem 0;
 }
 
-@media all and (min-width: 720px) {
+@media (min-width: 640px) {
   .Main {
-    padding: 4.8rem 0;
+    padding: 4.45rem 0;
   }
 }
 
@@ -3336,17 +3331,17 @@ img {
 
 ----------------------------------------------------------------------------- */
 .Section {
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.75rem;
+}
+
+@media (min-width: 640px) {
+  .Section {
+    margin-bottom: 4.45rem;
+  }
 }
 
 .Section:last-child {
   margin-bottom: 0;
-}
-
-@media all and (min-width: 720px) {
-  .Section {
-    margin-bottom: 4.8rem;
-  }
 }
 
 /* -----------------------------------------------------------------------------
@@ -3384,14 +3379,14 @@ img {
 .SubNav-link {
   display: block;
   margin: 0;
-  padding: 0.4rem 2.4rem;
+  padding: 0.4rem 2.75rem;
   border: solid 0.2rem #28aadc;
 }
 
 .SubNav-link:hover,
 .SubNav-item.active .SubNav-link {
   color: #fff;
-  background-color: #28aadc;
+  background-color: #166888;
 }
 
 /* -----------------------------------------------------------------------------
@@ -3400,19 +3395,19 @@ img {
 
 ----------------------------------------------------------------------------- */
 .Footer {
-  padding: 1.2rem 0;
+  padding: 0.65rem 0;
   text-align: center;
 }
 
-@media all and (min-width: 480px) {
+@media (min-width: 480px) {
   .Footer {
-    padding: 2.4rem 0;
+    padding: 1.05rem 0;
   }
 }
 
-@media all and (min-width: 720px) {
+@media (min-width: 640px) {
   .Footer {
-    padding: 4.8rem 0;
+    padding: 1.7rem 0;
   }
 }
 
@@ -3423,14 +3418,21 @@ img {
 ----------------------------------------------------------------------------- */
 #carbonads {
   position: fixed;
-  right: 1.2rem;
-  bottom: 1.2rem;
+  right: 1.05rem;
+  bottom: 1.05rem;
   z-index: 1000;
-  padding: 2.4rem 1.2rem 1.2rem 1.2rem;
+  display: none;
+  padding: 24px 12px 12px 12px;
   width: 154px;
   background-color: #fff;
   line-height: 1.1;
-  border: solid 1px #f1f1f1;
+  border: solid 1px #d9d9d9;
+}
+
+@media (min-width: 640px) {
+  #carbonads {
+    display: block;
+  }
 }
 
 .carbon-wrap {
@@ -3447,27 +3449,20 @@ img {
 }
 
 .carbon-text {
-  color: #818181;
-  font-size: 1.2rem;
+  color: #909090;
+  font-size: 11px;
 }
 
 .carbon-poweredby {
-  font-size: 1.0rem;
-  font-style: italic;
+  font-size: 9px;
 }
 
 .carbonad__close {
   display: block;
   position: absolute;
-  top: 0;
-  left: 1.2rem;
-  height: 2.4rem;
-  font-size: 1.1rem;
-  line-height: 2.4rem;
-}
-
-@media all and (max-width: 660px) {
-  #carbonads {
-    display: none;
-  }
+  top: 6px;
+  left: 12px;
+  height: 12px;
+  font-size: 10px;
+  line-height: 12px;
 }

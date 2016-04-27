@@ -5,15 +5,13 @@
 ----------------------------------------------------------------------------- */
 
 .Section {
-  margin-bottom: 2.4rem;
+  margin-bottom: map-get($gutter, xl);
+
+  @include break(md) {
+    margin-bottom: map-get($gutter, xx);
+  }
 }
 
 .Section:last-child {
   margin-bottom: 0;
-}
-
-@media all and (min-width: $breakpoint--md) {
-  .Section {
-    margin-bottom: 4.8rem;
-  }
 }

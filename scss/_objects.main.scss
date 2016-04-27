@@ -5,11 +5,9 @@
 ----------------------------------------------------------------------------- */
 
 .Main {
-  padding: 2.4rem 0;
-}
+  padding: map-get($gutter, xl) 0;
 
-@media all and (min-width: $breakpoint--md) {
-  .Main {
-    padding: 4.8rem 0;
+  @include break(md) {
+    padding: map-get($gutter, xx) 0;
   }
 }

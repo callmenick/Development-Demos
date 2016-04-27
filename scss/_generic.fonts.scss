@@ -4,41 +4,41 @@
 
 ----------------------------------------------------------------------------- */
 
-@font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../fonts/oxygen-v5-latin-300.eot');
-  src: local('Oxygen Light'), local('Oxygen-Light'),
-       url('../fonts/oxygen-v5-latin-300.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/oxygen-v5-latin-300.woff2') format('woff2'),
-       url('../fonts/oxygen-v5-latin-300.woff') format('woff'),
-       url('../fonts/oxygen-v5-latin-300.ttf') format('truetype'),
-       url('../fonts/oxygen-v5-latin-300.svg#Oxygen') format('svg');
-}
+/**
+ * Montserrat
+ */
 
 @font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/oxygen-v5-latin-regular.eot');
-  src: local('Oxygen'), local('Oxygen-Regular'),
-       url('../fonts/oxygen-v5-latin-regular.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/oxygen-v5-latin-regular.woff2') format('woff2'),
-       url('../fonts/oxygen-v5-latin-regular.woff') format('woff'),
-       url('../fonts/oxygen-v5-latin-regular.ttf') format('truetype'),
-       url('../fonts/oxygen-v5-latin-regular.svg#Oxygen') format('svg');
-}
-
-@font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat-bold-webfont.eot');
+  src: url('../fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+       url('../fonts/montserrat-bold-webfont.woff') format('woff'),
+       url('../fonts/montserrat-bold-webfont.ttf') format('truetype'),
+       url('../fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
   font-weight: 700;
-  src: url('../fonts/oxygen-v5-latin-700.eot');
-  src: local('Oxygen Bold'), local('Oxygen-Bold'),
-       url('../fonts/oxygen-v5-latin-700.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/oxygen-v5-latin-700.woff2') format('woff2'),
-       url('../fonts/oxygen-v5-latin-700.woff') format('woff'),
-       url('../fonts/oxygen-v5-latin-700.ttf') format('truetype'),
-       url('../fonts/oxygen-v5-latin-700.svg#Oxygen') format('svg');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat-light-webfont.eot');
+  src: url('../fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+       url('../fonts/montserrat-light-webfont.woff') format('woff'),
+       url('../fonts/montserrat-light-webfont.ttf') format('truetype'),
+       url('../fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat-thin-webfont.eot');
+  src: url('../fonts/montserrat-thin-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/montserrat-thin-webfont.woff2') format('woff2'),
+       url('../fonts/montserrat-thin-webfont.woff') format('woff'),
+       url('../fonts/montserrat-thin-webfont.ttf') format('truetype'),
+       url('../fonts/montserrat-thin-webfont.svg#montserratthin') format('svg');
+  font-weight: 100;
+  font-style: normal;
 }

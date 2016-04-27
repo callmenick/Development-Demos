@@ -20,18 +20,18 @@
 
 .SubNav-item {
   margin: 0;
-  padding: 0.4rem;
+  padding: map-get($gutter, xs);
 }
 
 .SubNav-link {
   display: block;
   margin: 0;
-  padding: 0.4rem 2.4rem;
-  border: solid 0.2rem $color--theme;
+  padding: map-get($gutter, xs) map-get($gutter, xl);
+  border: solid 0.2rem $color-theme-main;
 }
 
 .SubNav-link:hover,
 .SubNav-item.active .SubNav-link {
   color: #fff;
-  background-color: $color--theme;
+  background-color: $color-theme-dark;
 }

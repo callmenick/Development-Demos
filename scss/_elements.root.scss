@@ -9,9 +9,9 @@ html {
 }
 
 body {
-  color: $color--neutral-4;
+  color: $color-neutral-2;
   background-color: #fff;
-  font-family: $font-family--primary;
-  font-size: $font-size--sm;
-  line-height: $line-height--md;
+  font-family: $font-primary;
+  font-size: map-get($font-size, sm);
+  line-height: map-get($line-height, md);
 }

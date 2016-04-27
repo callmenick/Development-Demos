@@ -6,14 +6,19 @@
 
 #carbonads {
   position: fixed;
-  right: 1.2rem;
-  bottom: 1.2rem;
+  right: map-get($gutter, md);
+  bottom: map-get($gutter, md);
   z-index: 1000;
-  padding: 2.4rem 1.2rem 1.2rem 1.2rem;
+  display: none;
+  padding: 24px 12px 12px 12px;
   width: 154px;
   background-color: #fff;
   line-height: 1.1;
-  border: solid 1px $color--neutral-8;
+  border: solid 1px $color-neutral-4;
+
+  @include break(md) {
+    display: block;
+  }
 }
 
 .carbon-wrap {
@@ -30,27 +35,20 @@
 }
 
 .carbon-text {
-  color: rgb(129, 129, 129);
-  font-size: 1.2rem;
+  color: $color-neutral-3;
+  font-size: 11px;
 }
 
 .carbon-poweredby {
-  font-size: 1.0rem;
-  font-style: italic;
+  font-size: 9px;
 }
 
 .carbonad__close {
   display: block;
   position: absolute;
-  top: 0;
-  left: 1.2rem;
-  height: 2.4rem;
-  font-size: 1.1rem;
-  line-height: 2.4rem;
-}
-
-@media all and (max-width: 660px) {
-  #carbonads {
-    display: none;
-  }
+  top: 6px;
+  left: 12px;
+  height: 12px;
+  font-size: 10px;
+  line-height: 12px;
 }
